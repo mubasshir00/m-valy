@@ -1,0 +1,19 @@
+
+.cartBtnWrapper{
+    margin: 10px 10px;
+    color: white;
+}
+.cartBtn{
+   color: white;
+}
+.cartContainer{
+   display: flex;
+   flex-direction: row;
+}
+.cartValue{
+    font-size: 30px;
+    color: #ce9244;
+}
+.cartIcon{
+    font-size: 20px
+}
