@@ -4,6 +4,10 @@ import './Home.css'
 import imagesArray  from './data'
 import {FaChevronLeft,FaChevronRight} from 'react-icons/fa'
 
+import Sidenav from './sidenav/Sidenav'
+import Sidenavright from './sidenav/Sidenavright'
+import Product from '../product/Product'
+
 const Home = () => {
 
     const [images, setImages] = useState(imagesArray);
@@ -46,7 +50,12 @@ const Home = () => {
     }, [index])
 
     return (
+        <>
         <div className="home">
+            <div className="homeWrapper">
+                <div className="sideNavContainer">
+                <Sidenav/>
+                </div>
             <div className="homeContainer">
             {
                 images.map((item,itemIndex)=>{
@@ -75,9 +84,15 @@ const Home = () => {
                 <FaChevronRight/>
             </button>
            </div>
-
-            </div>           
+            </div> 
+                <div className="sideNavRight">
+                    <Sidenavright/>
+                </div>
+            </div>  
         </div>
+        <Product/>
+        
+        </>
     )
 }
 

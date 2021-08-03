@@ -56,7 +56,7 @@ const Header = () => {
 
             </div>
         </div>
-                </Router>
+        </Router>
         {/* <div className="cartBtnWrapper">
                    <Link className="cartBtn" to="/cart">
                    Cart

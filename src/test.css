@@ -1,0 +1,32 @@
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height:600px; */
+}
+.homeWrapper{
+  width: 80vw;
+  max-width: 1400px;
+  /* height: 600px; */
+}
+.homeContainer{
+    /* margin: 0 auto; */
+   
+    /* width: 1200px;
+    max-width: 90%; */
+    text-align: center;
+    /* position: relative; */
+    display: flex;
+    overflow: hidden;
+    /* height: 600px; */
+}
+.homeContainer img{
+    width: 100%;
+}
+.bannerImg{
+    width:100%;
+    height: auto;
+    z-index: -1;
+    /* margin-bottom: -250px; */
+    /* mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0)); */
+}

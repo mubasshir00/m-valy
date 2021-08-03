@@ -1,0 +1,66 @@
+.btn{
+    display: block;
+    line-height: 33px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #12225b;
+    position: relative;
+    text-align: center;
+    /* box-sizing: border-box; */
+    outline: none;
+}
+ .source{
+    display: inline-block;
+    max-width: 110px;
+    padding: 0 10px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 21px;
+    height: 20px;
+    background: #12225b;
+}
+.sideNavRight {
+    width: 350px;
+    padding-right: 10px;
+}
+.sideRightNavContainer{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 34px;
+    overflow: hidden;
+    height: 100%;
+
+}
+.rightWrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    border-bottom: 1px solid rgba(220,222,227,.7);
+    overflow: hidden;
+    text-decoration: none;
+    flex-direction: row;
+    
+    /* align-items: baseline; */
+}
+.rightImg{
+    /* position: absolute;
+    right: 0;
+    bottom: 0; */
+}
+.rightTitle{
+    padding-bottom: 30px;
+}
+.rightTitle p{
+    margin: 20px 40px 14px 0;
+    /* word-break: break-word; */
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    max-height: 44px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
