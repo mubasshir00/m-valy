@@ -1,24 +1,23 @@
 import React from 'react'
 import logo from './images/PinClipart.com_barber-clippers-clipart_576184.png'
 import {BrowserRouter as Router , Switch,Route,Link} from 'react-router-dom'
-import {FaSearch , FaShoppingCart} from 'react-icons/fa'
+import {FaSearch , FaShoppingCart ,FaBars} from 'react-icons/fa'
 import './Cartbutton.css'
 import './Header.css'
+import { useProductsContext } from '../../context/products_context'
 const Header = () => {
+    const {isSidebarOpen,closeSidebar} = useProductsContext();
+    
     return (
         <>
-        <Router>
         <div className="header">
-            <Link to="/">
+        <Link to="/">
                 <img className="logo" src={ logo } alt="" />
             </Link>
 
-            <div>
-                <div></div>
-                <div className="headerOption">
-                    <span className="optionOne">Deliver To</span>
-                    <span>Bangladesh</span>
-                </div>
+            <div className="headerOption">
+                <span className="optionOne">Deliver To</span>
+                <span>Bangladesh</span>
             </div>
 
             <div className="header_search">
@@ -27,13 +26,10 @@ const Header = () => {
             </div>
 
             <div className="headerNav">
-                    <div className="headerOption">
-                        {/* <img className="flagImage" src={usaflag} alt="" /> */}
-                    </div>
                 <div className="headerOption">
-                    <span className="optionOne">Hello, Sign In</span>
-                        <span>Accounts & Lists</span>
-                    </div>
+                    <Link to="/" className="optionOne">Hello, Sign In</Link>
+                    <Link>Accounts & Lists</Link>
+                </div>
                 <div className="headerOption">
                     <span className="optionOne">Returns</span>
                         <span>& Orders</span>
@@ -41,7 +37,7 @@ const Header = () => {
 
                 <Link className="link" to="/checkout">
                 <div className="cartBtnWrapper">
-                   <Link className="cartBtn" to="/cart">
+                   <div className="cartBtn" to="/cart">
                    Cart
                    <span className="cartContainer">
                        <FaShoppingCart className="cartIcon"/>
@@ -49,25 +45,16 @@ const Header = () => {
                            10
                        </span>
                    </span>
-                   </Link>
+                   </div>
                </div>
                 </Link>
 
+                <button type="button" className="nav-toggle">
+                    <FaBars/>
+                </button>
 
             </div>
         </div>
-        </Router>
-        {/* <div className="cartBtnWrapper">
-                   <Link className="cartBtn" to="/cart">
-                   Cart
-                   <span className="cartContainer">
-                       <FaShoppingCart/>
-                       <span className="cartValue">
-                           10
-                       </span>
-                   </span>
-                   </Link>
-               </div> */}
         </>
     )
 }

@@ -7,13 +7,14 @@ import {FaChevronLeft,FaChevronRight} from 'react-icons/fa'
 import Sidenav from './sidenav/Sidenav'
 import Sidenavright from './sidenav/Sidenavright'
 import Product from '../product/Product'
+import Productbycategory from '../product/Productbycategory'
 
 const Home = () => {
 
     const [images, setImages] = useState(imagesArray);
     const [index, setIndex] = useState(0);
 
-    console.log(images);
+    // console.log(images);
 
     const prevSlide = () =>{
         setIndex((oldIndex)=>{
@@ -91,7 +92,7 @@ const Home = () => {
             </div>  
         </div>
         <Product/>
-        
+        <Productbycategory/>
         </>
     )
 }

@@ -8,13 +8,13 @@ import {newArrivalsData ,topProducts ,personalArray ,dropShip,globalProducts,tru
 
 const Product = () => {
     return (
-        <Router>
+        <>
            <div className="productContainer">
            <div className="productWrapper">
             
             <div className="productHolderContainer">
             <div className="title">
-                    <img src="/icon1.png" alt=""/>
+                    <img src="/icon1.png" alt="" className="iconImg"/>
                     <p>New Arrivals</p>
             </div>
             <div className="productHolder">
@@ -22,10 +22,10 @@ const Product = () => {
                    newArrivalsData.map((item)=>{
                        const {id,image,price} = item;
                        return(
-                           <Link>
+                           <Link to={`/products/${id}`}>
                                <img src={image} alt=""/>
                                <p>BDT {price}</p>
-                               <p>Trending Now</p>
+                               <p className="greyFont">Trending Now</p>
                            </Link>
                        )
                    })
@@ -36,7 +36,7 @@ const Product = () => {
 
                <div className="productHolderContainer">
                <div className="title">
-                    <img src="/icon2.png" alt=""/>
+                    <img src="/icon2.png" alt="" className="iconImg"/>
                     <p>Top-ranked Products</p>
                </div>
                <div className="productHolder">
@@ -44,10 +44,10 @@ const Product = () => {
                    topProducts.map((item)=>{
                        const {id,image,price} = item;
                        return(
-                           <Link>
-                               <img src={image} alt=""/>
+                           <Link to={`/products/${id}`} >
+                               <img src={image} alt="" />
                                <p>BDT {price}</p>
-                               <p>Trending Now</p>
+                               <p className="greyFont">Trending Now</p>
                            </Link>
                        )
                    })
@@ -57,7 +57,7 @@ const Product = () => {
               
               <div className="productHolderContainer">
               <div className="title">
-                    <img src="/icon3.png" alt=""/>
+                    <img src="/icon3.png" alt="" className="iconImg"/>
                     <p>Personal Protective Equipment</p>
                </div>
               <div className="productHolder">
@@ -65,10 +65,10 @@ const Product = () => {
                    personalArray.map((item)=>{
                        const {id,image,price} = item;
                        return(
-                           <Link>
-                               <img src={image} alt=""/>
+                           <Link to={`/products/${id}`}>
+                               <img src={image} alt="" />
                                <p>BDT {price}</p>
-                               <p>Trending Now</p>
+                               <p className="greyFont">Trending Now</p>
                            </Link>
                        )
                    })
@@ -78,7 +78,7 @@ const Product = () => {
 
               <div className="productHolderContainer">
               <div className="title">
-                    <img src="/icon3.png" alt=""/>
+                    <img src="/icon3.png" alt="" className="iconImg"/>
                     <p>Dropshipping</p>
                </div>
               <div className="productHolder">
@@ -86,7 +86,7 @@ const Product = () => {
                    dropShip.map((item)=>{
                        const {id,image,price} = item;
                        return(
-                           <Link>
+                           <Link to={`/products/${id}`}>
                                <img src={image} alt=""/>
                                <p>BDT {price}</p>
                                <p></p>
@@ -99,7 +99,7 @@ const Product = () => {
 
               <div className="productHolderContainer">
               <div className="title">
-                    <img src="/icon4.jpg" alt=""/>
+                    <img src="/icon4.jpg" alt="" className="iconImg"/>
                     <p> Global Original Sources</p>
                </div>
               <div className="productHolder">
@@ -107,7 +107,7 @@ const Product = () => {
                    globalProducts.map((item)=>{
                        const {id,image,price} = item;
                        return(
-                           <Link>
+                           <Link to={`/products/${id}`}>
                                <img src={image} alt=""/>
                                <p>BDT {price}</p>
                                <p></p>
@@ -120,7 +120,7 @@ const Product = () => {
 
               <div className="productHolderContainer">
               <div className="title">
-                    <img src="/icon5.png" alt=""/>
+                    <img src="/icon5.png" alt="" className="iconImg"/>
                     <p> True View</p>
                </div>
               <div className="productHolder">
@@ -128,7 +128,7 @@ const Product = () => {
                    trueView.map((item)=>{
                        const {id,image,price} = item;
                        return(
-                           <Link>
+                           <Link to={`/products/${id}`}>
                                <img src={image} alt=""/>
                                <p>BDT {price}</p>
                                <p></p>
@@ -141,7 +141,7 @@ const Product = () => {
 
            </div>
         </div>
-        </Router>
+        </>
     )
 }
 
