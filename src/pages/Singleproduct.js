@@ -8,6 +8,7 @@ import {BrowserRouter as Router , Switch,Route,Link} from 'react-router-dom'
 
 
 import {newArrivalsData ,topProducts ,personalArray ,dropShip,globalProducts,trueView} from '../components/product/Productdata'
+import { useStateValue } from '../context/StateProvider'
 
 const arrayOfProduct = newArrivalsData.concat(topProducts,personalArray,dropShip,globalProducts,trueView)
 
@@ -20,12 +21,27 @@ const getLocalItems = () =>{
     }
 }
 
+
 const Singleproduct = () => {
     const {id} = useParams();
-   
+    const [{basket},dispatch] = useStateValue();
+
+
     const newArr = arrayOfProduct.filter((p)=>p.id==id)
 
     const [items, setItems] = useState(newArr[0] || getLocalItems())
+
+    const addToBasket = () =>{
+        dispatch({
+            type: "ADD_TO_BASKET",
+            item:{
+                id:id,
+                image:image,
+                price:price,
+                name:name,
+            },
+        });
+    };
 
     useEffect(()=>{
         localStorage.setItem('lists',JSON.stringify(items))
@@ -71,7 +87,7 @@ const Singleproduct = () => {
             </div>
             <p className="price">Price : ${price}</p>
             {/* <p>{tempRet}</p> */}
-            <button type="submit">Add To Cart</button>
+            <button onClick={addToBasket}>Add To Cart</button>
             </div>
             
             <div className="desDiv">

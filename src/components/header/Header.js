@@ -4,10 +4,10 @@ import {BrowserRouter as Router , Switch,Route,Link} from 'react-router-dom'
 import {FaSearch , FaShoppingCart ,FaBars} from 'react-icons/fa'
 import './Cartbutton.css'
 import './Header.css'
-import { useProductsContext } from '../../context/products_context'
+import { useStateValue } from '../../context/StateProvider'
 const Header = () => {
-    const {isSidebarOpen,closeSidebar} = useProductsContext();
-    
+    const [{basket},dispatch] = useStateValue();
+    // console.log(basket);
     return (
         <>
         <div className="header">
@@ -42,7 +42,7 @@ const Header = () => {
                    <span className="cartContainer">
                        <FaShoppingCart className="cartIcon"/>
                        <span className="cartValue">
-                           10
+                           {basket?.length}
                        </span>
                    </span>
                    </div>
