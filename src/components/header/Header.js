@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <>
         <div className="header">
-        <Link to="/">
+            <Link to="/">
                 <img className="logo" src={ logo } alt="" />
             </Link>
 
@@ -26,9 +26,9 @@ const Header = () => {
             </div>
 
             <div className="headerNav">
-                <div className="headerOption">
-                    <Link to="/" className="optionOne">Hello, Sign In</Link>
-                    <Link>Accounts & Lists</Link>
+                <div className="loginInHeader">
+                    <Link to="/login">Sign In</Link>
+                    <Link to="/login">Sign Up</Link>
                 </div>
                 <div className="headerOption">
                     <span className="optionOne">Returns</span>

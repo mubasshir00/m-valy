@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React, { useEffect, useState } from 'react'
 import './Singleproduct.css'
 import { useParams } from 'react-router-dom'
 
-import {FaStar,FaRegStar} from 'react-icons/fa'
+import {FaStar,FaRegStar,FaPlus, FaMinus} from 'react-icons/fa'
 
 import {BrowserRouter as Router , Switch,Route,Link} from 'react-router-dom'
 
@@ -25,7 +26,7 @@ const getLocalItems = () =>{
 const Singleproduct = () => {
     const {id} = useParams();
     const [{basket},dispatch] = useStateValue();
-
+    const [counter, setCounter] = useState(0)
 
     const newArr = arrayOfProduct.filter((p)=>p.id==id)
 
@@ -42,6 +43,35 @@ const Singleproduct = () => {
             },
         });
     };
+
+    const removeHandler = () =>{
+        dispatch({
+            type:'REMOVE_FROM_BASKET',
+            id:id,
+        })
+    }
+
+    const increaseHandler =() =>{
+       setCounter(counter+1)
+    }
+    const decreaseHandler = () =>{
+        if(counter>0){
+            setCounter(counter-1)
+        }
+        else{
+            setCounter(0)
+        }
+    }
+
+    const callDouble = () =>{
+        increaseHandler();
+        addToBasket();
+    }
+
+    const decreaseDouble = () =>{
+        removeHandler();
+        decreaseHandler();
+    }
 
     useEffect(()=>{
         localStorage.setItem('lists',JSON.stringify(items))
@@ -87,7 +117,18 @@ const Singleproduct = () => {
             </div>
             <p className="price">Price : ${price}</p>
             {/* <p>{tempRet}</p> */}
-            <button onClick={addToBasket}>Add To Cart</button>
+            {/* <button onClick={addToBasket}>Add To Cart</button> */}
+            <div className="iconButton">
+                <button onClick={callDouble} >
+                    <FaPlus/>
+                </button>
+                <button onClick={decreaseDouble}>
+                    <FaMinus/>
+                </button>
+                <div className="items">
+                <h2>items : {counter}</h2>
+                </div>
+            </div>
             </div>
             
             <div className="desDiv">
@@ -95,6 +136,7 @@ const Singleproduct = () => {
             <p>{des}</p>
             </div>
             </div>
+            
         </div>
     )
 }

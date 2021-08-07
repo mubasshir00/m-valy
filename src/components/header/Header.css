@@ -51,10 +51,18 @@
     /* justify-content: space-evenly; */
     align-items: center;
 }
-.headerOption{
+.headerOption , .loginInHeader{
     display: flex;
     flex-direction: column;
     margin: 10px 10px;
+    font-size: 12px;
+    font-weight: bolder;
+    border: 2px solid transparent;
+    padding: 2px;
+    border-radius: 2px;
+}
+.headerOption:hover, .loginInHeader:hover{
+    border:2px solid white
 }
 .optionOne{
     font-size: 12px;
@@ -85,7 +93,7 @@
 .nav-toggle{
     display: none;
 }
-.headerOption a{
+.loginInHeader a , .headerOption a{
     color: white;
 }
 

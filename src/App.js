@@ -4,6 +4,7 @@ import Home from './components/home/Home';
 import {BrowserRouter as Router , Switch,Route,Link} from 'react-router-dom'
 import Singleproduct from './pages/Singleproduct';
 import Checkout from './components/checkout/Checkout';
+import Login from './components/login/Login';
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
            {/* children={<Singleproduct/>} */}
            <Singleproduct/>
         </Route>
-
+        <Route path="/login">
+          <Login/>
+        </Route>
       </Switch>
     </Router>
   );

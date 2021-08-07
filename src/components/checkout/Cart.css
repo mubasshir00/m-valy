@@ -1,3 +1,6 @@
-.cartContainer{
-    
+.cartProductHolder{
+   text-align: center;
+   line-height: 1.7;
+   border: 1px solid grey;
+   padding: 20px;
 }

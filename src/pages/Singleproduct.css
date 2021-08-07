@@ -91,3 +91,16 @@
     color: goldenrod;
     font-size: 18px;
 }
+
+.iconButton{
+    /* width:200px; */
+    max-width: 100%;
+    text-align: center;
+}
+.iconButton button{
+    margin: 20px;
+}
+.items{
+    /* background-color: white;
+    border-radius: 2px; */
+}
