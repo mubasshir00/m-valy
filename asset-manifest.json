@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/m-valy/static/css/main.6836d775.chunk.css",
+    "main.js": "/m-valy/static/js/main.bec32b0d.chunk.js",
+    "main.js.map": "/m-valy/static/js/main.bec32b0d.chunk.js.map",
+    "runtime-main.js": "/m-valy/static/js/runtime-main.f8df5421.js",
+    "runtime-main.js.map": "/m-valy/static/js/runtime-main.f8df5421.js.map",
+    "static/js/2.8f142a5b.chunk.js": "/m-valy/static/js/2.8f142a5b.chunk.js",
+    "static/js/2.8f142a5b.chunk.js.map": "/m-valy/static/js/2.8f142a5b.chunk.js.map",
+    "static/js/3.fefadc04.chunk.js": "/m-valy/static/js/3.fefadc04.chunk.js",
+    "static/js/3.fefadc04.chunk.js.map": "/m-valy/static/js/3.fefadc04.chunk.js.map",
+    "index.html": "/m-valy/index.html",
+    "static/css/main.6836d775.chunk.css.map": "/m-valy/static/css/main.6836d775.chunk.css.map",
+    "static/js/2.8f142a5b.chunk.js.LICENSE.txt": "/m-valy/static/js/2.8f142a5b.chunk.js.LICENSE.txt",
+    "static/media/PinClipart.com_barber-clippers-clipart_576184.64a0d895.png": "/m-valy/static/media/PinClipart.com_barber-clippers-clipart_576184.64a0d895.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f8df5421.js",
+    "static/js/2.8f142a5b.chunk.js",
+    "static/css/main.6836d775.chunk.css",
+    "static/js/main.bec32b0d.chunk.js"
+  ]
+}
