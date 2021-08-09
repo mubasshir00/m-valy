@@ -4,6 +4,15 @@ import {BrowserRouter as Router , Switch,Route,Link, useHistory} from 'react-rou
 import { auth } from '../../firebase';
 
 const Login = () => {
+
+  const [MousePosition, setMousePosition] = useState({
+    left: 0,
+    top: 0
+})
+
+function handleMouseMove(ev) { setMousePosition({left: ev.pageX, top: ev.pageY}); }
+
+
     const [dynamicClass, setdynamicClass] = useState("");
 
     const [email, setEmail] = useState('');
@@ -42,7 +51,10 @@ const Login = () => {
     }
     
     return (
-        <div className="flip-container">
+        <>
+          <div class="content" onMouseMove={(ev)=> handleMouseMove(ev)}
+      style={{left:MousePosition.left , top: MousePosition.top}}>
+          <div className="flip-container">
   <div className={`flipper ${dynamicClass}`} id="flipper">
     <div className="front">
       <h1 className="title">Login</h1>
@@ -83,7 +95,14 @@ const Login = () => {
     </div>
   </div>
 </div>
+          </div>
+  <div className="cursor" onMouseMove={(ev)=> handleMouseMove(ev)}
+      style={{left:MousePosition.left , top: MousePosition.top}}/>
+  <div className="cursor2" />
 
+
+
+        </>
     )
 }
 export default Login
