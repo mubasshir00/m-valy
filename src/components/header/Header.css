@@ -62,7 +62,8 @@
     border-radius: 2px;
 }
 .headerOption:hover, .loginInHeader:hover{
-    border:2px solid white
+    border:2px solid white;
+    color: green;
 }
 .optionOne{
     font-size: 12px;
@@ -95,6 +96,10 @@
 }
 .loginInHeader a , .headerOption a{
     color: white;
+}
+.loginInHeader a{
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (max-width:756px) {

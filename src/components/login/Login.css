@@ -4,7 +4,7 @@
     justify-content:center;
     height: 100vh;
     /* margin: 0; */
-    background-color: #10b8c1;
+    background-color: #9ad2d4;
 }
 .flipper {
   padding: 30px;
@@ -153,12 +153,13 @@
 .flip{
 		transform: rotateY(180deg);
 }
-input{
+.content input{
     width:100%;
     margin-bottom:15px;
     height:40px;
     box-sizing: border-box;
     padding:10px;
+    font-size: 20px;
 }
 
 .title{

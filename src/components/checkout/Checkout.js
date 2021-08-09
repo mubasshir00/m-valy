@@ -4,7 +4,7 @@ import Cart from './Cart'
 import './Checkout.css'
 import Subtotal from './Subtotal'
 const Checkout = () => {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket,user }, dispatch] = useStateValue();
 
     return (
         <div className="checkoutContainer">
@@ -12,6 +12,8 @@ const Checkout = () => {
             <div className="cartWrapper">
             <h2>Your Shopping List</h2>
             <hr/>
+            <h2>Hello {user?.email.split('@')[0]}</h2>
+
             <div className="cartItemsContainer">
             {
                 basket.map(item=>

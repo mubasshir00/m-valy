@@ -5,9 +5,16 @@ import {FaSearch , FaShoppingCart ,FaBars} from 'react-icons/fa'
 import './Cartbutton.css'
 import './Header.css'
 import { useStateValue } from '../../context/StateProvider'
+import { auth } from '../../firebase';
+
 const Header = () => {
-    const [{basket},dispatch] = useStateValue();
+    const [{basket ,user},dispatch] = useStateValue();
     // console.log(basket);
+    const handleAuth = () =>{
+        if(user){
+            auth.signOut();
+        }
+    }
     return (
         <>
         <div className="header">
@@ -26,9 +33,19 @@ const Header = () => {
             </div>
 
             <div className="headerNav">
-                <div className="loginInHeader">
-                    <Link to="/login">Sign In</Link>
-                    <Link to="/login">Sign Up</Link>
+                <div 
+                onClick={handleAuth}
+                className="loginInHeader">
+                    <Link to={!user && '/login'}>
+                    <span>
+                        Hello {user?.email.split('@')[0]}
+                    </span>
+                        <span>
+                        {user ? 'Sign Out' : 'Sign In'}</span>
+                        </Link>
+                    {/* <Link to="/login">
+                        {user ? '' : 'Sign Up'}
+                    </Link> */}
                 </div>
                 <div className="headerOption">
                     <span className="optionOne">Returns</span>
