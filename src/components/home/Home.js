@@ -8,6 +8,7 @@ import Sidenav from './sidenav/Sidenav'
 import Sidenavright from './sidenav/Sidenavright'
 import Product from '../product/Product'
 import Productbycategory from '../product/Productbycategory'
+import Footer from '../footer/Footer'
 
 const Home = () => {
 
@@ -57,7 +58,7 @@ const Home = () => {
                 <div className="sideNavContainer">
                 <Sidenav/>
                 </div>
-            <div className="homeContainer">
+                <div className="homeContainer">
             {
                 images.map((item,itemIndex)=>{
                     const{id,image} =item;
@@ -89,10 +90,19 @@ const Home = () => {
                 <div className="sideNavRight">
                     <Sidenavright/>
                 </div>
+                <div className="responsiveDiv">
+                <div className="sideNavContainer">
+                <Sidenav/>
+                </div>
+                <div className="sideNavRight">
+                    <Sidenavright/>
+                </div>
+                </div>
             </div>  
         </div>
         <Product/>
         <Productbycategory/>
+        <Footer/>
         </>
     )
 }

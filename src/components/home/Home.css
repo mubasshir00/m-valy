@@ -23,17 +23,18 @@
     display: flex;
     overflow: hidden;
     height: 400px;
+    /* order: 2; */
 }
 .homeContainer img{
-    /* width: 100%; */
-    /* height: 100%; */
+    width: 100%;
+    height: auto;
 }
 .bannerImg{
     width:100%;
     height: auto;
     z-index: -1;
     /* margin-bottom: -250px; */
-    mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
+    /* mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0)); */
 }
 .btnContainer{
     z-index: 999;
@@ -97,4 +98,75 @@ article.activeSlide {
     width: 390px;
     max-width: 100%;
     padding: 0px 4px;
+    /* order: 1; */
+  }
+
+  .sideNavRight{
+    /* order: 3; */
+  }
+
+  .responsiveDiv{
+    display: none;
+  }
+
+  @media screen and (max-width: 1228px){ 
+    .homeWrapper{
+      flex-direction: column;
+    }
+    .sideNavContainer{
+      display: none;
+    }
+    .sideNavRight{
+      display: none;
+    }
+    .responsiveDiv .sideNavContainer , .responsiveDiv .sideNavRight{
+      display:block;
+      width: 50%;
+    }
+    .responsiveDiv{
+      display:flex;
+    }
+  }
+
+  @media screen and (max-width: 969px) {
+    .homeContainer{
+      height: 400px;
+    }
+  }
+  @media screen and (max-width: 949px) {
+    .homeContainer{
+      height: 350px;
+    }
+  }
+  @media screen and (max-width: 765px) {
+    .homeContainer{
+      height: 300px;
+    }
+  }
+  @media screen and (max-width: 620px) {
+    .homeContainer{
+      height: 250px;
+    }
+  }
+  @media screen and (max-width: 531px) {
+    .homeContainer{
+      height: 200px;
+    }
+  }
+  @media screen and (max-width: 429px) {
+    .homeContainer{
+      height: 150px;
+    }
+  }
+
+  @media screen and (max-width: 577px){ 
+    .responsiveDiv .sideNavContainer , .responsiveDiv .sideNavRight{
+      display:block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .responsiveDiv{
+      display:flex;
+      flex-direction: column;
+    }
   }

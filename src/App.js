@@ -31,7 +31,7 @@ function App() {
   }, [])
 
   return (
-    <Router>
+    <Router >
       <Header/>
       <Switch>
         <Route exact path="/">

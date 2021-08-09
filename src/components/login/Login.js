@@ -99,6 +99,9 @@ function handleMouseMove(ev) { setMousePosition({left: ev.pageX, top: ev.pageY})
   <div className="cursor" onMouseMove={(ev)=> handleMouseMove(ev)}
       style={{left:MousePosition.left , top: MousePosition.top}}/>
   <div className="cursor2" />
+
+
+
         </>
     )
 }

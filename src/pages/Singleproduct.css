@@ -37,6 +37,11 @@
     flex-direction: row;
     
 }
+
+.singleWrapper h2{
+    font-size: 20px;
+}
+
 .singleWrapper img{
     width:200px;
     max-width: 100%;
@@ -103,4 +108,16 @@
 .items{
     /* background-color: white;
     border-radius: 2px; */
+}
+@media screen and (max-width: 844px){
+    .singleWrapper{
+        flex-direction: column;
+    align-items: center;
+    }
+    .imgDiv, .desDiv {
+        width: 100%;
+    }
+    .desDiv h3{
+        text-align: center;
+    }
 }

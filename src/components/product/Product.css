@@ -55,3 +55,23 @@
 .greyFont{
     color: #a0a0a0;
 }
+
+@media screen and (max-width:459px) {
+    .productHolder{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .productHolder .greyFont{
+        margin-bottom: 20px;
+    }
+   .productHolder a{
+    border: 2px solid #bdbdbd;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+   }
+
+}
